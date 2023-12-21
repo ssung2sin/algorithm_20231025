@@ -1,3 +1,5 @@
+package BackJoon;
+
 import java.util.Scanner;
 
 public class A1978 {
@@ -7,15 +9,15 @@ public class A1978 {
         int inputCount = sc.nextInt();
         int count = 0;
 
-        for(int i = 0;i<inputCount;i++) {
+        for (int i = 0; i < inputCount; i++) {
             int input = sc.nextInt();
-            if(input==1) {
+            if (input == 1) {
                 continue;
-            }else if(input==2) {
+            } else if (input == 2) {
 
-            }else{
-                for(int j=2;j<input;j++) {
-                    if(input%j==0) {
+            } else {
+                for (int j = 2; j < input; j++) {
+                    if (input % j == 0) {
                         count--;
                         break;
                     }
