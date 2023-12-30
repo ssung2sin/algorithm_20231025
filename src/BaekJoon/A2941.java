@@ -41,7 +41,7 @@ public class A2941 {
 
 		return addCount(index, text);
 	}
-
+	
 	private static int compareWordD(String text, int index) {
 		if (text.substring(index, index + 3).equals(croatianAlphabet[7])) {
 			count[7]++;
