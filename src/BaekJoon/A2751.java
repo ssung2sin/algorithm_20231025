@@ -1,15 +1,18 @@
 package BaekJoon;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class A2751 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int inputTime = sc.nextInt();
+	public static void main(String[] args) throws IOException {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
+		int inputTime = Integer.parseInt(bf.readLine());
 		int[] number = new int[inputTime];
 
 		for (int index = 0; index < inputTime; index++) {
-			number[index] = sc.nextInt();
+			number[index] = Integer.parseInt(bf.readLine());
 		}
 		int[] temp = new int[inputTime];
 
