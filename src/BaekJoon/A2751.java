@@ -1,8 +1,10 @@
 package BaekJoon;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class A2751 {
 	public static void main(String[] args) throws IOException {
@@ -17,10 +19,11 @@ public class A2751 {
 		int[] temp = new int[inputTime];
 
 		mergeSort(number, temp, 0, number.length - 1);
-
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		for (int index = 0; index < number.length; index++) {
-			System.out.println(temp[index]);
+			bw.write(number[index] + "\n");
 		}
+		bw.close();
 	}
 
 	private static void mergeSort(int[] number, int[] temp, int start, int end) {
@@ -36,11 +39,11 @@ public class A2751 {
 		int part1 = start;
 		int part2 = mid + 1;
 		int index = start;
-		for (int i = 0; i <= end; i++) {
+		for (int i = start; i <= end; i++) {
 			temp[i] = number[i];
 		}
 		while (part1 <= mid && part2 <= end) {
-			if (number[part1] > number[part2]) {
+			if (temp[part1] > temp[part2]) {
 				number[index] = temp[part2];
 				part2++;
 			} else {
@@ -50,7 +53,7 @@ public class A2751 {
 			index++;
 		}
 		for (int i = 0; i <= mid - part1; i++) {
-			number[index + i] = temp[index + i];
+			number[index + i] = temp[part1 + i];
 		}
 	}
 }
