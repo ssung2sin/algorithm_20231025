@@ -1,23 +1,30 @@
 package BaekJoon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class A4779 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int number = sc.nextInt();
-		int nSquared3 = 1;
-		for (int i = 0; i < number; i++) {
-			nSquared3 *= 3;
-		}
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input = "";
+		while ((input = br.readLine()) != null) {
+			StringBuilder sb = new StringBuilder();
+			int number = Integer.parseInt(input);
+			int nSquared3 = 1;
+			for (int i = 0; i < number; i++) {
+				nSquared3 *= 3;
+			}
 
-		char[] dash = new char[nSquared3];
-		Arrays.fill(dash, '-');
+			char[] dash = new char[nSquared3];
+			Arrays.fill(dash, '-');
 
-		sortDash(dash, 0, dash.length - 1);
-		for (int i = 0; i < dash.length; i++) {
-			System.out.println(dash[i]);
+			sortDash(dash, 0, dash.length - 1);
+			for (int i = 0; i < dash.length; i++) {
+				sb.append(dash[i]);
+			}
+			System.out.println(sb);
 		}
 	}
 
