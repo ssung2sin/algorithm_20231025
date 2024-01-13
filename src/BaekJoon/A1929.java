@@ -18,11 +18,11 @@ public class A1929 {
 			numbers[index] = true;
 		}
 
-		for (int index = 2; index < numbers.length; index++) {
+		for (int index = 2; index * index < numbers.length; index++) {
 			if (!numbers[index]) {
 				continue;
 			}
-			int i = index * 2;
+			int i = index * index;
 			while (i < numbers.length) {
 				numbers[i] = false;
 				i += index;
