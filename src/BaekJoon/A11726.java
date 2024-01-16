@@ -1,7 +1,9 @@
+package BaekJoon;
+
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Main {
+public class A11726 {
 
 	//시간초과
 	/*public static void main(String[] args) throws IOException {
