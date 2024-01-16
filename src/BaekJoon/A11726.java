@@ -1,13 +1,10 @@
-package BaekJoon;
+import java.math.BigInteger;
+import java.util.Scanner;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class A11726 {
+public class Main {
 
 	//시간초과
-	public static void main(String[] args) throws IOException {
+	/*public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int arrayY = Integer.parseInt(br.readLine());
 		int[][] squareArray = new int[2][arrayY];
@@ -41,9 +38,9 @@ public class A11726 {
 		squareArray[1][startY + 1]++;
 		startY += 2;
 		fillSquare(startY, squareArray);
-	}
+	}*/
 
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int arrayY = sc.nextInt();
 		BigInteger total = BigInteger.ZERO;
@@ -69,5 +66,5 @@ public class A11726 {
 			tot = tot.divide(BigInteger.valueOf(1 + index));
 		}
 		return tot;
-	}*/
+	}
 }
