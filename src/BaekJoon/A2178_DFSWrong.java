@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class A2178 {
+public class A2178_DFSWrong {
 	private static int[][] count;
 	private static boolean[][] visit;
 
