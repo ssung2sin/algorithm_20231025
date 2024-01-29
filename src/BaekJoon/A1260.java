@@ -33,7 +33,7 @@ public class A1260 {
 		visitDFS[startNode] = true;
 		findDFS(linkedNode, startNode, visitDFS);
 
-		System.out.print("\n" + startNode + " ");
+		System.out.print("\n");
 		visitBFS[startNode] = true;
 		findBFS(linkedNode, startNode, visitBFS);
 	}
@@ -50,26 +50,16 @@ public class A1260 {
 
 	private static void findBFS(int[][] linkedNode, int startNode, boolean[] visit) {
 		List<Integer> checkNode = new LinkedList<>();
-		List<Integer> nextNode = new LinkedList<>();
 		checkNode.add(startNode);
-		while (true) {
-			int count = 0;
-			for (int j = 0; j < checkNode.size(); j++) {
-				for (int i = 1; i < linkedNode[startNode].length; i++) {
-					if (linkedNode[checkNode.get(j)][i] == 1 && !visit[i]) {
-						System.out.print(i + " ");
-						visit[i] = true;
-						nextNode.add(i);
-						count++;
-					}
+		while (!checkNode.isEmpty()) {
+			int number = checkNode.remove(0);
+			System.out.print(number + " ");
+			for (int i = 1; i < linkedNode[startNode].length; i++) {
+				if (linkedNode[number][i] == 1 && !visit[i]) {
+					checkNode.add(i);
+					visit[i] = true;
 				}
 			}
-			if (count == 0) {
-				return;
-			} else {
-				checkNode = nextNode;
-			}
 		}
-
 	}
 }
