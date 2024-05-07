@@ -12,7 +12,8 @@ public class A161989_PaintingOver {
 		List<int[]> section = new ArrayList<>();
 		inputValue(n, m, section);
 		for (int i = 0; i < n.length; i++) {
-			System.out.println(solution.solution(n[i], m[i], section.get(i)));
+			System.out.println(solution.solution(n[i], m[i], section.get(i)) + ",");
+			System.out.println(solution.anotherSolution(n[i], m[i], section.get(i)));
 		}
 	}
 
